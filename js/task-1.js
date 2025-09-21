@@ -23,8 +23,11 @@ console.log(getShippingMessage('Sweden', 100, 20)); // "Shipping to Sweden will 
 // task-3
 
 function getElementWidth(content, padding, border) {
-  const totalPrice = price + deliveryFee;
-  return `Shipping to ${country} will cost ${totalPrice} credits`;
+  const a = parseFloat(content); // Так я перезаписав змінні (parseFloat краще, бо не ціле число)
+  const b = parseFloat(padding); //
+  const c = parseFloat(border); //
+
+  return a + b * 2 + c * 2; // Підставив нові змінні
 }
 
 console.log(getElementWidth('50px', '8px', '4px')); // 74
